@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <!-- Отключаем попытку скопировать мод в папку игры -->
     <EnableModDeploy>false</EnableModDeploy>
+    <!-- Отключаем создание ZIP архива самой библиотекой (GitHub это сделает сам) -->
+    <EnableModZip>false</EnableModZip>
+    <!-- "Обманка": указываем текущую папку как путь к игре, чтобы проверка не выдавала ошибку -->
+    <GamePath>.</GamePath>
   </PropertyGroup>
 
   <ItemGroup>
